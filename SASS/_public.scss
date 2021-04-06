@@ -1,0 +1,97 @@
+// reset
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #28363a;
+    font-family: 'Acme','Noto Sans TC',-apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+body{
+    background-color:  rgb(244, 243, 234);
+    letter-spacing: .05rem;
+    line-height: 1.7;
+}
+a{
+    text-decoration: none;
+}
+ol,
+ul {
+    list-style: none;
+}
+:focus {
+    outline: 0;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+input,
+select{
+    border: none;
+    background-color: transparent;
+}
+// colors
+$bg-color-dark: #031424; //背景黑藍色
+$tit-color: #333D51; //標題藍
+$not-font-color:  #D3AC2B; //主要顏色
+$bg-color-light: #CBD0D8; //背景淺藍
+$tip-color: #dabc5c; //提示顏色
+// indiviual setting
+.wrap{
+    width: 100%;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 10% 3%;
+    @include respond(smipadpro){
+        padding: 5%;
+    }
+    @include respond(ipadpro){
+        padding: 5%;
+    }
+    @include respond(laptop){
+        padding: 5% 3%;
+    }
+}
+.clearfix{
+    clear: both;
+}
+h2{
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: .1rem;
+    padding-bottom: 8%;
+    font-weight: 500;
+    @include respond(tablet){
+        font-size: 4.5rem;
+        padding-bottom: 5%;
+    }
+}
+h3{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    padding-top: 2%;
+    @include respond(phone){
+        font-size: 1.3rem;
+        letter-spacing: .1rem;
+        line-height: 1.6rem;
+    }
+    @include respond(tablet){
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+    @include respond(surface){
+        font-size: 1.3rem;
+    }
+    @include respond(ipadpro){
+        line-height: 2rem;
+        letter-spacing: .1rem;
+    }
+    @include respond(laptop){
+        min-height: 70px;
+    }
+}

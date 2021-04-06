@@ -1,0 +1,681 @@
+// kv-wrap
+.first-screen-container{
+    width: 100%;
+    height: 100vh;
+    background-color: $bg-color-dark;
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: type-bgcolor 2.5s forwards 8s;
+    @include respond(surface){
+        animation: type-bgcolor 2.5s forwards 6s;
+    }
+    p,span{
+        color: #fff;
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 700;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: type 4s steps(13),
+        type-opacity 1s forwards 6.5s,
+        type-textshadow 3.5s forwards 4.5s;
+        @include respond(surface){
+            font-size: 4rem;
+            animation: type 4s steps(13),
+            type-opacity 1s forwards 4.85s,
+            type-textshadow 3.5s forwards 3s;
+        }
+    }
+}
+.kv-wrap{
+    height: 95vh;
+    @include respond(ipadpro){
+        height: 100%;
+    }
+    @include respond(laptop){
+        padding: 3% 0;
+    }
+    .container{
+        height: 95vh;
+        background-image: url(/img/kv-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        @include respond(tablet){
+            background-size: contain;
+            background-position: 90% 75%;
+            padding: 5% 6%;
+        }
+        @include respond(ipad){
+            height: 100%;
+            background-size: auto;
+            background-position: 100% 75%;
+            padding: 5% 5%;
+        }
+        @include respond(smipadpro){
+            padding: 2% 5%;
+            background-position: 100% 50%;
+        }
+        @include respond(ipadpro){
+            background-size: auto;
+            padding: 8% 5%;
+            background-position: 95% 75%;
+        }
+        @include respond(laptop){
+            padding: 5%;
+        }
+        .kv-intro-content{
+            box-sizing: border-box;
+            padding-bottom: 3%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include respond(phone){
+                padding-bottom: 8%;
+            }
+            @include respond(tablet){
+                justify-content: center;
+                padding-bottom: 0;
+            }
+            @include respond(smipadpro){
+                justify-content: center;
+                padding-bottom: 0;
+            }
+            @include respond(ipadpro){
+                padding-bottom: 2%;
+            }
+            .intro-name{
+                font-size: 4rem;
+                line-height: 1.1;
+                color: rgb(255, 255, 255);
+                padding-bottom: 5%;
+                letter-spacing: .4rem;
+                @include respond(phone){
+                    font-size: 5rem;
+                }
+                @include respond(bigphone){
+                    font-size: 5.5rem;
+                    padding-bottom: 6%;
+                }
+                @include respond(surface){
+                    font-size: 6rem;
+                }
+                @include respond(ipadpro){
+                    padding-bottom: 3%;
+                    font-size: 6.5rem;
+                }
+                @include respond(laptop){
+                    font-size: 8rem;
+                    padding-bottom: 5%;
+                }
+                .intro-contnet{
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 5%;
+                    @include respond(surface){
+                        flex-direction: row;
+                        align-items: flex-end;
+                    }
+                    span{
+                        display: block;
+                        font-size: 4rem;
+                        color: $tit-color;
+                        @include respond(phone){
+                            font-size: 5rem;
+                        }
+                        @include respond(bigphone){
+                            font-size: 5rem;
+                        }
+                        @include respond(surface){
+                            font-size: 6rem;
+                        }
+                        @include respond(ipad){
+                            font-size: 6rem;
+                        }
+                        @include respond(ipadpro){
+                            font-size: 6.5rem;
+                        }
+                        @include respond(laptop){
+                            font-size: 8rem;
+                        }
+                    }
+                }
+            }
+            .intro{
+                background-color: #fff;
+                padding: 6%;
+                border-radius: 5px;
+                position: relative;
+                box-shadow: 10px 10px 15px -10px #c0cccf;
+                font-size: .95rem;
+                @include respond(phone){
+                    letter-spacing: .075rem;
+                    padding: 6% 7%;
+                    line-height: 1.6rem;
+                }
+                @include respond(bigphone){
+                    font-size: 1.05rem;
+                    line-height: 1.8rem;
+                }
+                @include respond(tablet){
+                    padding: 4% 5%;
+                    letter-spacing: .18rem;
+                }
+                @include respond(smipadpro){
+                    width: 60%;
+                    font-size: 1.2rem;
+                    padding: 4%;
+                    line-height: 2.1rem;
+                    letter-spacing: .1rem;
+                }
+                @include respond(ipadpro){
+                    line-height: 1.8rem;
+                }
+                @include respond(laptop){
+                    padding: 3.5%;
+                    line-height: 2.3rem;
+                }
+                span{
+                    @include respond(tablet){
+                        font-size: 1.3rem;
+                    }
+                }
+                &::after{
+                    content:'';
+                    background-image: url('/img/bg-brush02.png');
+                    background-size: 180px 80px;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    top: 78%;
+                    right: 0;
+                    width: 180px;
+                    height: 80px;
+                    @include respond(tablet){
+                        background-size: 270px 100px;
+                        width: 270px;
+                        height: 120px;
+                        top: 72%;
+                    }
+                }
+                span{
+                    color: $bg-color-light;
+                }
+            }
+        }
+    }
+}
+.connect-info{
+    padding-bottom: 2%;
+    @include respond(tablet){
+        padding-left: 2%;
+        display: inline-block;
+    }
+    li{
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-color: #D3AC2B;
+        border-radius: 50%;
+        @include respond(surface){
+            width: 40px;
+            height: 40px;
+        }
+        a{
+            display: block;
+            text-align: center;
+            position: relative;
+            .fab,
+            .fas{
+                position: absolute;
+                left: 0%;
+                transform: translateX(8%);
+                width: 100%;
+                height: 100%;
+                font-size: 17px;
+                color: #FFF;
+                text-align: center;
+                line-height: 32px;
+                @include respond(surface){
+                    font-size: 22px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}
+// skills-wrap
+.skills-wrap{
+    background-color: $bg-color-dark;
+    .container{
+        h2{
+            color: $tip-color;
+            position: relative;
+            &::after{
+                content: '';
+                background-image: url(/img/bg-brush04.png);
+                background-size: 100px 40px;
+                width: 100px;
+                height: 40px;
+                bottom: 10%;
+                right: 10%;
+                position: absolute;
+                @include respond(phone){
+                    right: 18%;
+                    bottom: 15%;
+                }
+                @include respond(tablet){
+                    background-size: 140px 70px;
+                    width: 140px;
+                    height: 70px;
+                    bottom: 0%;
+                    right: 10%;
+                }
+                @include respond(surface){
+                    right: 30%;
+                }
+                @include respond(ipadpro){
+                    right: 30%;
+                    background-size: 200px 70px;
+                    width: 200px;
+                    height: 70px;
+                }
+                @include respond(laptop){
+                    right: 35%;
+                    top: 45%;
+                }
+            }
+        }
+        .skills-list{
+            .skills-list-item{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-size: 1.05rem;
+                padding: 3% 0;
+                box-sizing: border-box;
+                @include respond(phone){
+                    font-size: 1.2rem;
+                    padding: 3.5% 0;
+                }
+                @include respond(bigphone){
+                    font-size: 1.3rem;
+                }
+                @include respond(tablet){
+                    font-size: 1.6rem;
+                    letter-spacing: .25rem;
+                    padding: 2% 0;
+                }
+                @include respond(ipadpro){
+                    width: 50%;
+                    float: left;
+                    font-size: 1.6rem;
+                    &:nth-child(2n+2) .skills-img{
+                        order: -1;
+                    }
+                }
+                @include respond(laptop){
+                    font-size: 2rem;
+                    padding: 3% 0;
+                    &:nth-child(3),
+                    &:nth-child(4){
+                        position: relative;
+                        left: 5%;
+                    }
+                }
+                .skills-img{
+                    width: 16%;
+                    padding: 0 2%;
+                    @include respond(tablet){
+                        width: 15%;
+                    }
+                    @include respond(ipadpro){
+                        width: 16%;
+                    }
+                    @include respond(laptop){
+                        width: 17%;
+                    }
+                }
+            }
+        }
+    }
+}
+// portfile
+.portfile-wrap{
+    position: relative;
+    .container{
+        .portfile-intro{
+            margin-bottom: 2%;
+            @include respond(surface){
+                font-size: 1rem;
+            }
+            li{
+                color:rgb(95, 95, 95);
+                font-size: .9rem;
+                @include respond(surface){
+                    font-size: 1rem;
+                }
+            }
+        }
+        .port-card-content{
+            .port-card{
+                background-color: #fff;
+                padding: 3%;
+                display: flex;
+                flex-direction: column;
+                border-radius: 5px;
+                box-shadow: 5px 5px 8px -5px #c0cccf;
+                position: relative;
+                margin: 5% 0;
+                box-sizing: border-box;
+                @include respond(surface){
+                    box-sizing: border-box;
+                    width: 49%;
+                    float: left;
+                    margin: 0 2% 5% 0;
+                    padding: 1.5%;
+                    min-height: 380px;
+                    &:nth-child(2n+2){
+                        margin-right: 0;
+                    }
+                }
+                @include respond(smipadpro){
+                    min-height: 440px;
+                }
+                @include respond(ipadpro){
+                    width: 32%;
+                    min-height: 380px;
+                    &:nth-child(2n){
+                        margin-right: 2%;
+                    }
+                    &:nth-child(3n){
+                        margin-right: 0;
+                    }
+                }
+                @include respond(laptop){
+                    min-height: 415px;
+                }
+                &:first-child{
+                    margin-top: 0;
+                }
+                .port-card-img{
+                    figure{
+                        .pro-year{
+                            color: #67758f;
+                            font-size: 1.2rem;
+                            font-weight: 300;
+                            display: inline-block;
+                            margin-left: 3px;
+                            letter-spacing: 0;
+                        }
+                        .skill-tags-content{
+                            padding-top: 2%;
+                            .skill-tag{
+                                display: inline-block;
+                                background-color: rgb(224, 195, 97);
+                                color: #fff;
+                                padding: .5% 2%;
+                                border-radius: 5px;
+                                margin: 1% .5%;
+                                font-size: .8rem;
+                                font-weight: 300;
+                                @include respond(phone){
+                                    font-size: .85rem;
+                                }
+                                @include respond(tablet){
+                                    font-size: 1rem;
+                                }
+                                @include respond(surface){
+                                    font-size: .9rem;
+                                }
+                                @include respond(ipadpro){
+                                    padding: .5% 1.5%;
+                                    font-size: 1rem;
+                                }
+                                &:first-child{
+                                    margin-left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .pro-music,
+            .pro-imb,
+            .pro-lawyer,
+            .pro-volunteer{
+                position: relative;
+                a{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(51, 61, 81, .8);
+                    border-radius: 5px;
+                    cursor: pointer;
+                    opacity: 0;
+                    &::after{
+                        content: '想看更多';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        color: #fff;
+                        font-size: 1.2rem;
+                        letter-spacing: .1rem;
+                    }
+                    &:hover{
+                        animation: stickerapper ease-in .5s forwards;
+                    }
+                }
+            }
+        }
+    }
+    &::after{
+        content: '';
+        background-image: url(/img/bg-brush01.png);
+        background-size: 150px 70px;
+        background-repeat: no-repeat;
+        width: 150px;
+        height: 70px;
+        position: absolute;
+        display: block;
+        top: 98.5%;
+        right: 0;
+        @include respond(bigphone){
+            background-size: 180px 100px;
+            width: 180px;
+            height: 100px;
+            top: 99%;
+            right: 5%;
+        }
+        @include respond(tablet){
+            background-size: 230px 110px;
+            width: 230px;
+            height: 110px;
+            right: 2%;
+            top: 98%;
+        }
+        @include respond(laptop){
+            right: 10%;
+            background-size: 360px 120px;
+            width: 360px;
+            height: 210px;
+        }
+    }
+}
+// about
+.aboutme-wrap{
+    background-color: $bg-color-dark;
+    .container{
+        padding-bottom: 20%;
+        @include respond(surface){
+            padding-bottom: 10%;
+        }
+        h2{
+            color: $tip-color;
+        }
+        .about-img-content{
+            position: relative;
+            padding: 10% 4%;
+            @include respond(surface){
+                padding: 10%;
+            }
+            @include respond(laptop){
+                padding: 10%;
+                width: 70%;
+                margin: auto;
+            }
+            .about-img{
+                &:first-child{
+                    width: 55%;
+                    position: relative;
+                }
+                &:nth-child(2){
+                    position: absolute;
+                    width: 50%;
+                    top: 0;
+                    right: 10%;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                    }
+                    @include respond(laptop){
+                        width: 40%;
+                        right: 15%;
+                    }
+                }
+                &:last-child{
+                    position: absolute;
+                    bottom: 20%;
+                    right: 0%;
+                    width: 40%;
+                }
+            }
+        }
+        .about-intro-content{
+            .about-intro{
+                position: relative;
+                padding: 5%;
+                @include respond(phone){
+                    padding: 5% 4%;
+                }
+                @include respond(tablet){
+                    padding: 3%;
+                }
+                @include respond(ipadpro){
+                    padding: 2% 3%;
+                }
+                &:first-child{
+                    padding-top: 0;
+                }
+                h4{
+                    color: $tip-color;
+                    font-size: 1.1rem;
+                    @include respond(tablet){
+                        font-size: 1.3rem;
+                    }
+                }
+                li,p{
+                    color: #fff;
+                    font-size: .95rem;
+                    padding: 2% 0;
+                    @include respond(phone){
+                        font-size: 1rem;
+                        padding: 1.5% 0;
+                        letter-spacing: 0;
+                    }
+                    @include respond (bigphone){
+                        font-size: 1rem;
+                    }
+                    @include respond(tablet){
+                        font-size: 1.2rem;
+                        padding: .25% 0;
+                    }
+                }
+                li:not(.project-exp-list-item){
+                    &::before{
+                        content: '▴';
+                    }
+                }
+                .project-exp{
+                    padding-top: 10%;
+                    @include respond(tablet){
+                        padding-top: 4%;
+                    }
+                    @include respond(ipadpro){
+                        padding-top: 2%;
+                    }
+                    .project-exp-list{
+                        .project-exp-list-item{
+                            padding: .5% 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// fixed-sticker
+.fixed__sticker{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding:  8px 0;
+    box-sizing: border-box;
+    margin: 0 auto 0 auto;
+    z-index: 2;
+    background-color: $not-font-color;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 7px 7px 11px -5px #6B6348;
+    -webkit-box-shadow: 7px 7px 11px -5px #6B6348;
+    -moz-box-shadow: 7px 7px 11px -5px #6B6348;
+    -o-box-shadow: 7px 7px 11px -5px #6B6348;
+    cursor: pointer;
+    @include respond(tablet){
+        padding:  10px 20px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    @include respond(surface){
+        justify-content: center;
+    }
+    .connect-tit{
+        font-size: 1.3rem;
+        @include respond(surface){
+            margin-right: 2%;
+            display: block;
+        }
+    }
+    .connect-method{
+        text-align: left;
+        li{
+            @include respond(surface){
+                margin-right: 10px;
+                display: inline-block;
+            }
+            a{
+                font-size: 1rem;
+                @include respond(tablet){
+                    font-size: 1.1rem;
+                }
+                .fas{
+                    font-size: 14px;
+                    margin-right: 8px;
+                    @include respond(laptop){
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

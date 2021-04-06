@@ -1,0 +1,36 @@
+// mixin RWD
+@mixin  respond ($breakpoint) {
+    @if $breakpoint == "laptop"{
+        @media all and (min-width:1280px){
+            @content;
+        }
+    } @else if $breakpoint == "ipadpro"{
+        @media all and (min-width:1024px){
+            @content;
+        }
+    }@else if $breakpoint == "smipadpro"{
+        @media all and (min-width:834px){
+            @content;
+        }
+    }@else if $breakpoint == "ipad"{
+        @media all and (min-width:769px){
+            @content;
+        }
+    }@else if $breakpoint == "surface"{
+        @media all and (min-width:541px){
+            @content;
+        }
+    }@else if $breakpoint == "tablet"{
+        @media all and (min-width: 415px){
+            @content;
+        }
+    } @else if $breakpoint == "bigphone"{
+        @media all and (min-width: 376px){
+            @content;
+        }
+    } @else if $breakpoint == "phone"{
+        @media all and (min-width: 321px){
+            @content;
+        }
+    } 
+}
